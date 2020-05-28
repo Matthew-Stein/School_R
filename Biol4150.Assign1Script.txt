@@ -1,0 +1,39 @@
+### Assignment #1: 
+
+counts <- c(39, 36, 30, 36, 27, 32, 22, 39, 31, 35)
+
+n<-2
+#change each repetition of calc.
+
+totalarea<-10
+a<-1
+totaln<-10
+samplearea <- a*n
+
+y<-sample(counts, n, replace = F)
+
+y1<-y[1]
+y2<-y[2]
+#y3<-y[3]
+#y4<-y[4]
+#y5<-y[5]
+#y6<-y[6]
+#y7<-y[7]
+#y8<-y[8]
+#y9<-y[9]
+
+sumy<-y1+y2#+y3+y4+y5+y6+y7+y8+y9
+
+D <- sumy/samplearea
+
+sumysq<-(y1*y1)+(y2*y2)#+(y3*y3)+(y4*y4)+(y5*y5)+(y6*y6)+(y7*y7)+(y8*y8)+(y9*y9)
+
+SEDcf <- (sqrt(1-(samplearea/totalarea)))*(1/a)*sqrt((sumysq-(sumy^2)/n)/(n*(n-1)))
+
+Y<-totalarea*D
+SEy <- totalarea*SEDcf
+
+D
+SEDcf
+Y
+SEy
